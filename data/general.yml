@@ -1,0 +1,19 @@
+section_path: 'sections/general/'
+guidelines:
+  - name: 'colors'
+    partial_name: colors
+
+  - name: 'email signature'
+    partial_name: email_signature
+
+  - name: 'fonts'
+    partial_name: fonts
+
+  - name: 'google docs'
+    partial_name: google_docs
+
+  - name: 'logo'
+    partial_name: logo
+
+  - name: 'presentations'
+    partial_name: presentations

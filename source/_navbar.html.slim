@@ -1,0 +1,19 @@
+.navbar.navbar-fixed-top
+  .container
+    .navbar-header
+      a.navbar-brand href="/"
+        span.company-name= 'ad2games '
+        span.environment styleguide
+      button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    nav.collapse.navbar-collapse role="navigation"
+      ul.nav.navbar-nav.pull-right
+        li class="#{'active' if current_page.path == 'index.html'}"
+          a href='index.html' General Guidelines
+        li class="#{'active' if current_page.path == 'components.html'}"
+          a href='components.html' UI Components
+        li class="#{'active' if current_page.path == 'patterns.html'}"
+          a href='patterns.html' UI Patterns

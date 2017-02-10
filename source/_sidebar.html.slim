@@ -1,0 +1,5 @@
+.left-col.col-md-3
+  ul.sidebar.nav.nav-stacked.hidden-xs
+    - data.general.guidelines.each do |guideline|
+      li
+        a href="##{guideline.name.parameterize}"= guideline.name.titleize

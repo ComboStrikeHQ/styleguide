@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta content='IE=edge' http-equiv='X-UA-Compatible'
+    meta charset='utf-8'
+    meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'
+    title ad2games Styleguide
+    = stylesheet_link_tag :styleguide
+    = javascript_include_tag :all
+    = favicon_tag 'images/favicon.ico'
+
+  body
+    = partial 'navbar', locals: {active_tab: 'active_tab'}
+
+    .container
+      .row
+        = partial 'sidebar'
+        = yield
+
+    footer.text-muted.text-center
+      .panel-body
+        em= 'Automatically generated with '
+        span.glyphicon.glyphicon-heart
+        em= ' in Berlin'

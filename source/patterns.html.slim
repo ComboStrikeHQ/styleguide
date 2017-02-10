@@ -1,0 +1,6 @@
+.main-col.col-md-9
+  br/
+  - data.general.guidelines.each do |guideline|
+    h2= guideline.name.titleize
+    = partial (data.general.section_path + guideline.partial_name)
+    hr/
