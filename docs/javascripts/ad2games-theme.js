@@ -1,1 +1,0 @@
-$(function(){$(".navbar .active").parents("li").addClass("active"),$(".toolbar .checkbox input").change(function(){return $(this).parents("li.btn").toggleClass("active",this.checked)}),$(".toolbar .checkbox input").trigger("change")});

@@ -1,0 +1,22 @@
+section_path: 'sections/patterns/'
+patterns:
+  - name: 'buttons'
+    partial_name: buttons
+
+  - name: 'datagrids'
+    partial_name: datagrids
+
+  - name: 'forms'
+    partial_name: forms
+
+  - name: 'modals'
+    partial_name: modals
+
+  - name: 'tables'
+    partial_name: tables
+
+  - name: 'tabs'
+    partial_name: tabs
+
+  - name: 'toolbars'
+    partial_name: toolbars
