@@ -20,8 +20,8 @@ page '/*.txt', layout: false
 
 set :slim, { :format => :html }
 activate :sprockets
-
 activate :i18n, :mount_at_root => :en
+set :build_dir, 'docs'
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -39,7 +39,7 @@ helpers do
   end
 end
 
-#set :relative_links, true
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -50,7 +50,7 @@ configure :build do
   activate :minify_javascript
 
   # activate :asset_host, :host => '//d1gaycsr18p7io.cloudfront.net/www.ubisoft-e3.com'
-  #activate :relative_assets
+  activate :relative_assets
 end
 
 after_configuration do
