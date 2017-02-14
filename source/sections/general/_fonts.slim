@@ -1,4 +1,4 @@
-link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans' rel='stylesheet'
+link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Source+Code+Pro' rel='stylesheet'
 
 h3  Design Dept: Brandon Text
 p
@@ -7,15 +7,17 @@ p
 p
   | Unfortunately licence restrictions prevent it being used outside the Design Dept. So we have different fonts for general use.
 .component
-  h2.font.brandon-text-bold
+  h2.font-demo.brandon-text-bold
     | ABCDEFGHIJKLMNOPQRSTUVWXYZ
     br/
     | abcdefghijklmnopqrstuvwxyz
-  p.font.brandon-text
+  p.font-demo.brandon-text
     | ABCDEFGHIJKLMNOPQRSTUVWXYZ
     br/
     | abcdefghijklmnopqrstuvwxyz
-pre.brandon-text.text-center
+    br/
+    | 1234567890
+pre.text-center
   .btn.btn-default.disabled Download Brandon Text
 
 h3  Headings: Montserrat
@@ -24,11 +26,13 @@ p
   br/
   | It is available in Google Docs/Slides and for download here.
 .component
-  h2.font.montserrat
+  h2.font-demo.montserrat
     | ABCDEFGHIJKLMNOPQRSTUVWXYZ
     br/
     | abcdefghijklmnopqrstuvwxyz
-pre.brandon-text.text-center
+    br/
+    | 1234567890
+pre.text-center
   = link_to 'Download Montserrat', 'public/montserrat.zip', class: 'btn btn-default'
 
 h3  Body: Open Sans
@@ -37,9 +41,26 @@ p
   br/
   | It is available in Google Docs/Slides and for download here.
 .component
-  p.font.open-sans
+  p.font-demo.open-sans
     | ABCDEFGHIJKLMNOPQRSTUVWXYZ
     br/
     | abcdefghijklmnopqrstuvwxyz
-pre.brandon-text.text-center
+    br/
+    | 1234567890
+pre.text-center
   = link_to 'Download Open Sans', 'public/open-sans.zip', class: 'btn btn-default'
+
+h3  Numbers: Source Code Pro
+p
+  | Source Code Pro is our font for numbers, value, tabular data, etc.
+  br/
+  | It is available in Google Docs/Slides and for download here.
+.component
+  p.font-demo.source-code-pro
+    | ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    br/
+    | abcdefghijklmnopqrstuvwxyz
+    br/
+    | 1234567890
+pre.text-center
+  = link_to 'Download Source Code Pro', 'public/source-code-pro.zip', class: 'btn btn-default'
