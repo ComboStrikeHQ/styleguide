@@ -33,6 +33,19 @@ p
             .btn.btn-default Default
             .btn.btn-primary Primary
             .btn.btn-default.disabled Disabled
+  .toolbar.toolbar-default
+    .container-fluid
+      .row
+        .col-xs-12
+          .form-inline
+            .form-group
+              label.btn-xs Drilldown
+            ul.btn-group.checkbox-btn-group
+              - 3.times do |i|
+                li
+                  input type='checkbox' id="filter_#{i}"
+                  label.btn.btn-default.btn-xs for="filter_#{i}"
+                    ' Filter #{i}
 
 pre
   code.slim
@@ -44,6 +57,18 @@ pre
                 .btn.btn-default Default
                 .btn.btn-primary Primary
                 .btn.btn-default.disabled Disabled
+      .toolbar.toolbar-default
+        .container-fluid
+          .row
+            .col-xs-12
+              .form-inline
+                .form-group
+                  label.btn-xs Drilldown
+                ul.btn-group.checkbox-btn-group
+                  li
+                    input type='checkbox' id="filter_1"
+                    label.btn.btn-default.btn-xs for="filter_1"
+                      ' Filter 1
 
 h3 Toolbar Sizes
 p
