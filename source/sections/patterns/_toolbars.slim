@@ -6,7 +6,10 @@ p
     A secondary toolbar, for instance, should always be in the 'Default' style.
 p
   | The <strong>Blank</strong> toolbar can be used in rare cases where toolbar behaviour (horizontal grouping of buttons/inputs) is desired,
-   but not the visual separation/attention that comes with the toolbar background. This also can achieve the effect of 'floating' toolbar inputs.
+    but not the visual separation/attention that comes with the toolbar background. This also can achieve the effect of 'floating' toolbar inputs.
+p
+  | The <strong>Drilldown</strong> toolbar is for filters, metrics, or other toggleable buttons. It uses the checkbox inputs to function,
+    as seen in the code example.
 
 .component
   .toolbar.toolbar-primary
@@ -33,6 +36,19 @@ p
             .btn.btn-default Default
             .btn.btn-primary Primary
             .btn.btn-default.disabled Disabled
+  .toolbar.toolbar-default
+    .container-fluid
+      .row
+        .col-xs-12
+          .form-inline
+            .form-group
+              label.btn-xs Drilldown
+            ul.btn-group.checkbox-btn-group
+              - 3.times do |i|
+                li
+                  input type='checkbox' id="filter_#{i}"
+                  label.btn.btn-default.btn-xs for="filter_#{i}"
+                    ' Filter #{i}
 
 pre
   code.slim
@@ -44,6 +60,18 @@ pre
                 .btn.btn-default Default
                 .btn.btn-primary Primary
                 .btn.btn-default.disabled Disabled
+      .toolbar.toolbar-default
+        .container-fluid
+          .row
+            .col-xs-12
+              .form-inline
+                .form-group
+                  label.btn-xs Drilldown
+                ul.btn-group.checkbox-btn-group
+                  li
+                    input type='checkbox' id="filter_1"
+                    label.btn.btn-default.btn-xs for="filter_1"
+                      ' Filter 1
 
 h3 Toolbar Sizes
 p
