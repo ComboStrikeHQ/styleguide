@@ -1,10 +1,4 @@
 $(function() {
-  // trigger change event on toggle buttons (containing hidden checkbox)
-  $('.toolbar .checkbox input').change(function() {
-    return $(this).parents('li.btn').toggleClass('active', this.checked);
-  });
-  $('.toolbar .checkbox input').trigger('change');
-
   // sidebar
   $('.sidebar').affix({
     offset: {
