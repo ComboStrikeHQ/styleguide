@@ -36,6 +36,23 @@ p
             .btn.btn-default Default
             .btn.btn-primary Primary
             .btn.btn-default.disabled Disabled
+  .toolbar.toolbar-primary
+    .container-fluid
+      .row
+        .col-xs-12
+          .form-inline
+            .form-group
+              label.btn-xs Drilldown
+            .btn-group data-toggle='buttons'
+              - 3.times do |i|
+                label.btn.btn-xs.btn-default class=('active' if i == 0)
+                  input type='checkbox' id="filter_#{i}" checked=('checked' if i == 0)
+                  ' Filter #{i}
+            .btn-group data-toggle='buttons'
+              - 3.times do |i|
+                label.btn.btn-xs.btn-primary class=('active' if i == 0)
+                  input type='checkbox' id="filter_#{i}" checked=('checked' if i == 0)
+                  ' Filter #{i}
   .toolbar.toolbar-default
     .container-fluid
       .row
@@ -43,12 +60,16 @@ p
           .form-inline
             .form-group
               label.btn-xs Drilldown
-            ul.btn-group.checkbox-btn-group
+            .btn-group data-toggle='buttons'
               - 3.times do |i|
-                li
-                  input type='checkbox' id="filter_#{i}"
-                  label.btn.btn-default.btn-xs for="filter_#{i}"
-                    ' Filter #{i}
+                label.btn.btn-xs.btn-default class=('active' if i == 0)
+                  input type='checkbox' id="filter_#{i}" checked=('checked' if i == 0)
+                  ' Filter #{i}
+            .btn-group data-toggle='buttons'
+              - 3.times do |i|
+                label.btn.btn-xs.btn-primary class=('active' if i == 0)
+                  input type='checkbox' id="filter_#{i}" checked=('checked' if i == 0)
+                  ' Filter #{i}
 
 pre
   code.slim
@@ -67,11 +88,13 @@ pre
               .form-inline
                 .form-group
                   label.btn-xs Drilldown
-                ul.btn-group.checkbox-btn-group
-                  li
-                    input type='checkbox' id="filter_1"
-                    label.btn.btn-default.btn-xs for="filter_1"
-                      ' Filter 1
+                .btn-group data-toggle='buttons'
+                  label.btn.btn-xs.btn-default.active
+                    input type='checkbox' id='filter_1' checked='checked'
+                    ' Filter 0
+                  label.btn.btn-xs.btn-default
+                    input type='checkbox' id='filter_2'
+                    ' Filter 1
 
 h3 Toolbar Sizes
 p

@@ -10,9 +10,9 @@ GIT
 
 GIT
   remote: https://github.com/ad2games/ad2games-theme
-  revision: e4c38e00a96e14f274630a7956da975fa281d819
+  revision: c53fa9c403a443d1c415af6042bf2510f8d05e17
   specs:
-    ad2games-theme (0.74)
+    ad2games-theme (0.75)
       sass-rails
 
 GEM
@@ -198,4 +198,4 @@ DEPENDENCIES
   slim
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
