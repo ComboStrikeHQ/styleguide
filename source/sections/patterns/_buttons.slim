@@ -9,7 +9,7 @@ p
   .btn.btn-default Default
   '
   .btn.btn-primary Primary
-  ' 
+  '
   .btn.btn-default.disabled Disabled
 pre
   code.slim
@@ -17,24 +17,29 @@ pre
       .btn.btn-primary Primary
 
 br/
-h3 Toolbar Buttons + Button Groups
+h3 Button Groups + Appended Buttons
 p
-  | Toolbar buttons may appear ungrouped, within a .btn-group/.form-group, or
+  | Buttons may appear ungrouped, within a .btn-group/.form-group, or
     attached to an input within an .input-group.
 .component
   .toolbar
-    .container-fluid
-      .row
-        .col-xs-12
+    .row
+      .col-sm-8
+        .btn.btn-default Default
+        .btn-group
           .btn.btn-default Default
-          .btn-group
-            .btn.btn-default Default
-            .btn.btn-primary Primary
-            .btn.btn-default.disabled Disabled
+          .btn.btn-primary Primary
+          .btn.btn-default.disabled Disabled
+      .col-sm-4
+        .form-group
+          .input-group
+            input.form-control(placeholder='Lorem ipsum')
+            span.input-group-btn
+              .btn.btn-default Go
 
-  .toolbar.toolbar-primary
-    .container-fluid
-      .row
+pre
+  code.slim
+    | .row
         .col-sm-8
           .btn.btn-default Default
           .btn-group
@@ -47,33 +52,6 @@ p
               input.form-control(placeholder='Lorem ipsum')
               span.input-group-btn
                 .btn.btn-default Go
-pre
-  code.slim
-    | .toolbar
-        .container-fluid
-          .row
-            .col-xs-12
-              .btn.btn-default Default
-              .btn-group
-                .btn.btn-default Default
-                .btn.btn-primary Primary
-                .btn.btn-default.disabled Disabled
-
-      .toolbar.toolbar-primary
-        .container-fluid
-          .row
-            .col-sm-8
-              .btn.btn-default Default
-              .btn-group
-                .btn.btn-default Default
-                .btn.btn-primary Primary
-                .btn.btn-default.disabled Disabled
-            .col-sm-4
-              .form-group
-                .input-group
-                  input.form-control(placeholder='Lorem ipsum')
-                  span.input-group-btn
-                    .btn.btn-default Go
 
 h3 Table Buttons
 p
