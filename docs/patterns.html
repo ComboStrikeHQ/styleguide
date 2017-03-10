@@ -128,6 +128,7 @@ as seen in the code example.</p><div class="component"><div class="toolbar toolb
           .btn.btn-default Default
           .btn.btn-primary Primary
           .btn.btn-default.disabled Disabled
+
 .toolbar.toolbar-default
   .container-fluid
     .row
@@ -136,12 +137,15 @@ as seen in the code example.</p><div class="component"><div class="toolbar toolb
           .form-group
             label.btn-xs Drilldown
           .btn-group data-toggle='buttons'
-            label.btn.btn-xs.btn-default.active
-              input type='checkbox' id='filter_1' checked='checked'
-              ' Filter 0
-            label.btn.btn-xs.btn-default
-              input type='checkbox' id='filter_2'
-              ' Filter 1</code></pre><h3>Toolbar Sizes</h3><p>Toolbars also support size variations, depending on the contents of the toolbar.<br> Avaiable size modifiers for input elements are <strong>'lg'</strong>, <strong>'sm'</strong> and <strong>'xs'</strong> (see below for usage).</p><div class="component"><div class="toolbar toolbar-default"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-lg">Default</div><div class="btn btn-primary btn-lg">Primary</div><div class="btn btn-default btn-lg disabled">Disabled</div></div></div></div></div></div><div class="toolbar"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default">Default</div><div class="btn btn-primary">Primary</div><div class="btn btn-default disabled">Disabled</div></div></div></div></div></div><div class="toolbar toolbar-default"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-sm">Default</div><div class="btn btn-primary btn-sm">Primary</div><div class="btn btn-default btn-sm disabled">Disabled</div></div></div></div></div></div><div class="toolbar"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-xs">Default</div><div class="btn btn-primary btn-xs">Primary</div><div class="btn btn-default btn-xs disabled">Disabled</div></div></div></div></div></div></div><pre><code class="slim">.toolbar.toolbar-default
+            - drilldown_values.each do |drilldown|
+              - active? = @report_params.present? && @report_params[:groups].include?(drilldown)
+                label.btn.btn-xs.btn-default class=('active' if active?)
+                  input{ type='checkbox'
+                         id="report_drilldown_#{drilldown}"
+                         name='report[drilldown][]'
+                         value=drilldown
+                         checked=active? }
+                  = t(".drilldown.#{drilldown}")</code></pre><h3>Toolbar Sizes</h3><p>Toolbars also support size variations, depending on the contents of the toolbar.<br> Avaiable size modifiers for input elements are <strong>'lg'</strong>, <strong>'sm'</strong> and <strong>'xs'</strong> (see below for usage).</p><div class="component"><div class="toolbar toolbar-default"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-lg">Default</div><div class="btn btn-primary btn-lg">Primary</div><div class="btn btn-default btn-lg disabled">Disabled</div></div></div></div></div></div><div class="toolbar"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default">Default</div><div class="btn btn-primary">Primary</div><div class="btn btn-default disabled">Disabled</div></div></div></div></div></div><div class="toolbar toolbar-default"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-sm">Default</div><div class="btn btn-primary btn-sm">Primary</div><div class="btn btn-default btn-sm disabled">Disabled</div></div></div></div></div></div><div class="toolbar"><div class="container-fluid"><div class="row"><div class="col-xs-12"><div class="btn-group"><div class="btn btn-default btn-xs">Default</div><div class="btn btn-primary btn-xs">Primary</div><div class="btn btn-default btn-xs disabled">Disabled</div></div></div></div></div></div></div><pre><code class="slim">.toolbar.toolbar-default
   .container-fluid
     .row
       .col-xs-12

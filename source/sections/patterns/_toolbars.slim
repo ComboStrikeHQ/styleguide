@@ -81,6 +81,7 @@ pre
                 .btn.btn-default Default
                 .btn.btn-primary Primary
                 .btn.btn-default.disabled Disabled
+
       .toolbar.toolbar-default
         .container-fluid
           .row
@@ -89,12 +90,15 @@ pre
                 .form-group
                   label.btn-xs Drilldown
                 .btn-group data-toggle='buttons'
-                  label.btn.btn-xs.btn-default.active
-                    input type='checkbox' id='filter_1' checked='checked'
-                    ' Filter 0
-                  label.btn.btn-xs.btn-default
-                    input type='checkbox' id='filter_2'
-                    ' Filter 1
+                  - drilldown_values.each do |drilldown|
+                    - active? = @report_params.present? && @report_params[:groups].include?(drilldown)
+                      label.btn.btn-xs.btn-default class=('active' if active?)
+                        input{ type='checkbox'
+                               id="report_drilldown_\#{drilldown}"
+                               name='report[drilldown][]'
+                               value=drilldown
+                               checked=active? }
+                        = t(".drilldown.\#{drilldown}")
 
 h3 Toolbar Sizes
 p
