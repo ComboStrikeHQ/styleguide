@@ -1,0 +1,27 @@
+.row
+  .col-md-8
+    ul
+      li Works on groups as well as single elements.
+      li
+        | Select multiple elements  →  Right-click:
+        ul
+          li
+            | ‘Align horizontally/vertically’ will align all elements relative to each other.
+            br
+            | Eg. align horizontally left, all elements in the selection will have their left edges aligned, and positioned on the left-most element (vertical positions remain the same).
+          li
+            | ‘Distribute horizontally/vertically’ will use the most extremely positioned elements as reference for the distribution of the others.
+            br
+            | Eg. distribute horizontally, the left and right-most elements will be used as reference, and the other elements (or groups) will be evenly spaced between them.
+      li In the case of a single element (or group) selection, there is also the possibility to ‘Centre on Page’. This does what it says.
+  .col-md-4.hidden-xs.hidden-sm
+    .row
+      .col-xs-6
+        = image_tag 'http://via.placeholder.com/200x300'
+      .col-xs-6
+        p= image_tag 'http://via.placeholder.com/200x100'
+        p= image_tag 'http://via.placeholder.com/200x100'
+      .col-xs-12
+        p
+          br
+          = image_tag 'http://via.placeholder.com/400x100'

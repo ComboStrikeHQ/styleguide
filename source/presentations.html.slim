@@ -1,0 +1,6 @@
+.main-col.col-md-9
+  br/
+  - data.presentations.guidelines.each do |guideline|
+    h2 id="#{guideline.name.parameterize}"= guideline.name.titleize
+    = partial (data.presentations.section_path + guideline.partial_name)
+    hr/

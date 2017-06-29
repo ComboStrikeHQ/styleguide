@@ -76,6 +76,10 @@
     max-height: 50px;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   .component {
     border-radius: 2px 2px 0 0;
     border: 1px dashed rgba($gray-dark, .2);
@@ -85,10 +89,6 @@
       margin-top: -1px;
       border-radius: 0 0 2px 2px;
       border-top-color: $gray-lighter;
-    }
-
-    img {
-      max-width: 100%;
     }
   }
 
@@ -103,6 +103,14 @@
     border: 1px solid rgba($gray-dark, .1);
     width: 100%;
     padding: 15px;
+  }
+
+  ul {
+    margin-top: $padding-base-vertical;
+
+    li {
+      margin-bottom: $padding-base-vertical;
+    }
   }
 }
 
@@ -132,6 +140,7 @@ td [data-toggle="markdown-readonly"] p:last-child {
 .font-demo {
   font-size: 2em;
 }
+
 .brandon-text-bold { font-family: 'BrandonTextWeb-Bold' }
 .brandon-text { font-family: 'BrandonTextWeb-Regular' }
 .montserrat { font-family: 'montserrat', sans-serif; }

@@ -1,0 +1,22 @@
+.row
+  .col-md-8
+    ul
+      li
+        | For consistent positioning of elements on the slide, the snapping mode can be swapped between Grid and Guides.
+      li
+        | Guides is the default mode.
+        br
+      	| This mode tries to align and resize elements based on other elements on the slide.
+        ul
+          li Use Guides mode for resizing icons to all have the same height as each other, or for aligning an icon to the centre point of a neighbouring text-box.
+      li
+        | Grid snaps to the invisible grid that the template is based on.
+        br
+        | This is best for positioning elements consistently and resizing text-boxes, without relying on Slides to correctly guess what you are trying to line it up with.
+        ul
+          li Use Grid mode when cropping and resizing images, positioning elements generally on the slide, resizing shapes/boxes, etc.
+  .col-md-4.hidden-xs.hidden-sm
+    .row
+      - 6.times do
+        .col-xs-2
+          = image_tag 'http://via.placeholder.com/45x600'

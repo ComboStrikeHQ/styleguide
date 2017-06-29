@@ -6,6 +6,11 @@
         li
           a href="##{guideline.name.parameterize}"= guideline.name.titleize
 
+    - if current_page.path == 'presentations.html'
+      - data.presentations.guidelines.each do |guideline|
+        li
+          a href="##{guideline.name.parameterize}"= guideline.name.titleize
+
     - if current_page.path == 'patterns.html'
       - data.patterns.patterns.each do |pattern|
         li

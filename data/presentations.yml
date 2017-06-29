@@ -1,0 +1,28 @@
+section_path: 'sections/presentations/'
+guidelines:
+  - name: 'introduction'
+    partial_name: introduction
+
+  - name: 'typography'
+    partial_name: typography
+
+  - name: 'design: layout'
+    partial_name: design_layout
+
+  - name: 'design: whitespace'
+    partial_name: design_whitespace
+
+  - name: 'design: density'
+    partial_name: design_density
+
+  - name: 'alignment'
+    partial_name: general_alignment
+
+  - name: 'snapping'
+    partial_name: general_snapping
+
+  - name: 'images'
+    partial_name: images
+
+  - name: 'groups'
+    partial_name: groups
