@@ -1,5 +1,12 @@
 .main-col.col-md-9
   br/
+
+  .alert.alert-info
+    .alert-heading Using Slides Offline
+    p
+      | For a quick guide on using Slides (and other Google Docs) offline, click
+      strong= link_to ' HERE', 'https://docs.google.com/a/hitfox.com/document/d/1y48tB2cGtQLFQmYOaJnunqs845JvpaoF5JPcTipkLUg/edit?usp=sharing', target: '_blank'
+
   - data.presentations.guidelines.each do |guideline|
     h2 id="#{guideline.name.parameterize}"= guideline.name.titleize
     = partial (data.presentations.section_path + guideline.partial_name)

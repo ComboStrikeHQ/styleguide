@@ -112,6 +112,15 @@
       margin-bottom: $padding-base-vertical;
     }
   }
+
+  .alert-heading {
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba($black, .1);
+    margin: (-$padding-base) (-$padding-base) $padding-base (-$padding-base);
+    padding: $padding-base-vertical $padding-base;
+  }
 }
 
 td [data-toggle="markdown-readonly"] p:last-child {

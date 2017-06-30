@@ -1,14 +1,25 @@
-h3 Resize
-ul
-  li Hold ‘SHIFT’ as you drag the handles of an image, to maintain the correct ratio between width and height
-h3 Crop
-ul
-  li Double-click on an image to enter cropping mode
-  li Once in cropping mode, the image can be resized, repositioned and rotated separately to the crop.
-  li You can crop to a shape by clicking the arrow next to the crop icon on the toolbar and selecting the shape you want.
-h3 Replace Placeholders
-ul
-  li Right-click on an image placeholder and select ‘Replace Image’
-h3 Transparency
-ul
-  li Select an image, then click the ‘Image Options’ button on the toolbar. This will open up a panel on the right where you can change the image opacity.
+.row
+  .col-md-8
+    h3 Format
+    ul
+      li Use exclusively JPG format, with the except of logos which can be JPG or PNG.
+      li Resize all (non-logo) images to 1080p (1920px width x 1080px height) BEFORE importing them into the presentation.
+    h3 Resize
+    ul
+      li Hold ‘SHIFT’ as you drag the handles of an image, to maintain the correct ratio between width and height
+    h3 Crop
+    ul
+      li Double-click on an image to enter cropping mode
+      li Once in cropping mode, the image can be resized, repositioned and rotated separately to the crop.
+      li You can crop to a shape by clicking the arrow next to the crop icon on the toolbar and selecting the shape you want.
+    h3 Replace Placeholders
+    ul
+      li Right-click on an image placeholder and select ‘Replace Image’
+    h3 Transparency
+    ul
+      li Select an image, then click the ‘Image Options’ button on the toolbar. This will open up a panel on the right where you can change the image opacity.
+  .col-md-4.hidden-xs.hidden-sm
+    p
+      = image_tag 'http://via.placeholder.com/300x250'
+    p
+      = image_tag 'http://via.placeholder.com/640x360'
