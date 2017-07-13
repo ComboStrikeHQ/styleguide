@@ -1,0 +1,41 @@
+.row
+  .col-md-6
+    h3 Definitions
+    strong Aspect Ratio
+    p
+      | The width:height ratio of the image. Generally we want to keep the aspect ratio so that an image can be enlarged without appearing stretched or squashed.
+    strong Crop
+    p
+      | Cropping is the removal of the outer parts of an image to improve framing, accentuate subject matter or change aspect ratio.
+
+  .col-md-6
+    .well
+      h3 Resizing Tool
+      p
+        | Here is a free online tool you can use to resize images:
+      = link_to 'resizeimage.net', 'http://resizeimage.net/',
+        target: '_blank', class: 'btn btn-default'
+
+  .col-md-12
+    h3 Formats
+    .row
+      .col-xs-4
+        strong JPG
+        ul
+          li Small file-size
+          li Good for photos
+          li Bad for flat-colours and text
+          li No transparency
+      .col-xs-4
+        strong GIF
+        ul
+          li Small file-size
+          li Bad for photos
+          li Good for flat-colours and text
+          li Supports basic transparency
+      .col-xs-4
+        strong PNG
+        ul
+          li Large file-size
+          li Good for everything
+          li Supports advanced transparency

@@ -105,7 +105,7 @@
     padding: 15px;
   }
 
-  ul {
+  ul:not(.nav-tabs) {
     margin-top: $padding-base-vertical;
 
     li {
