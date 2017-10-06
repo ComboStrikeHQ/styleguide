@@ -17,3 +17,6 @@ guidelines:
 
   - name: 'resize images'
     partial_name: resize_images
+
+  - name: 'stock images'
+    partial_name: stock_images

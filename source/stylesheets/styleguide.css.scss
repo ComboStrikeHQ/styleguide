@@ -80,7 +80,8 @@
     max-width: 100%;
   }
 
-  pre {
+  pre,
+  .well {
     border-radius: 2px 2px 0 0;
     border: 1px solid $gray-lighter;
     margin: 0;
@@ -93,17 +94,21 @@
       margin-top: -1px;
     }
 
+    h3:first-child {
+      margin-top: 0;
+    }
+
     &:first-child:last-child {
       border-radius: 2px;
     }
-
-
   }
 
   p + pre,
-  pre + p,
   p + .component,
-  .component + p {
+  p + .well,
+  pre + p,
+  .component + p,
+  .well + p {
     margin-top: $padding-base;
   }
 
@@ -112,7 +117,8 @@
     border: 1px dashed $gray-light;
     padding: 15px;
 
-    + pre {
+    + pre,
+    + .well {
       margin-top: -1px;
       border-radius: 0 0 2px 2px;
     }
@@ -175,6 +181,10 @@ td [data-toggle="markdown-readonly"] p:last-child {
 .open-sans { font-family: 'Open Sans', sans-serif; }
 .source-code-pro { font-family: 'Source Code Pro', monospace; }
 
+.grid-heading {
+  margin-bottom: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -182,8 +192,18 @@ td [data-toggle="markdown-readonly"] p:last-child {
     "feature feature"
     "main main";
 
+  @media(min-width: 1200px) {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+      "feature feature feature"
+      "main main main";
+  }
+
   @media(max-width: 768px) {
     grid-template-columns: 100%;
+    grid-template-areas:
+      "feature"
+      "main";
   }
 
   &.row::before {
@@ -192,23 +212,23 @@ td [data-toggle="markdown-readonly"] p:last-child {
   }
 
   .cell {
-    padding: 15px 10px 60px;
+    padding: 0 10px 15px;
     margin: 0 5px 15px;
-    border-bottom: 15px solid $body-bg;
 
     &.feature {
       grid-area: feature;
 
       iframe {
         height: 275px;
+        width: 100%;
+        pointer-events: none;
+        background: $gray-white url('https://d1gaycsr18p7io.cloudfront.net/styleguide/padlock.png') no-repeat center;
+
+        @media(max-width: 768px) {
+          height: 150px;
+        }
       }
     }
-  }
-}
-
-.embedded-doc {
-  @media(max-width: 768px) {
-    display: none;
   }
 }
 

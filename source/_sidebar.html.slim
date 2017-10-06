@@ -21,7 +21,14 @@
 
     - if current_page.path == 'docs.html'
       li
+        h6 INTERNAL USE
+      li
         a href="##{'design request form'.parameterize}"= 'design request form'.titleize
-      - data.docs.links.each do |link|
+      - data.docs.internal_links.each do |link|
+        li
+          a href="##{link.name.parameterize}"= link.name.titleize
+      li
+        h6 EXTERNAL USE
+      - data.docs.external_links.each do |link|
         li
           a href="##{link.name.parameterize}"= link.name.titleize

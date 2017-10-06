@@ -1,10 +1,18 @@
 .main-col.col-md-9
   br/
+  h2.grid-heading Internal Use
   .row.grid
     .cell.feature
-      h2 id='design-request-form'= 'design request form'.titleize
+      h3 id='design-request-form'= 'design request form'.titleize
       = partial (data.docs.section_path + 'design_request_form')
-    - data.docs.links.each do |link|
+    - data.docs.internal_links.each do |link|
       .cell
-        h2 id="#{link.name.parameterize}"= link.name.titleize
+        h3 id="#{link.name.parameterize}"= link.name.titleize
+        = partial (data.docs.section_path + link.partial_name)
+  hr
+  h2.grid-heading External Use
+  .row.grid
+    - data.docs.external_links.each do |link|
+      .cell
+        h3 id="#{link.name.parameterize}"= link.name.titleize
         = partial (data.docs.section_path + link.partial_name)

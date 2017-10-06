@@ -1,11 +1,16 @@
 section_path: 'sections/docs/'
-links:
+
+internal_links:
   - name: 'presentation template'
     partial_name: presentation_template
 
-  - name: 'g. docs offline'
+  - name: 'stock images'
+    partial_name: stock_images
+
+  - name: 'google docs offline'
     partial_name: google_docs_offline
 
+external_links:
   - name: 'ad specs doc'
     partial_name: ad_specs_doc
 
