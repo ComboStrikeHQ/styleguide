@@ -18,3 +18,10 @@
 
     - if current_page.path == 'components.html'
       li
+
+    - if current_page.path == 'docs.html'
+      li
+        a href="##{'design request form'.parameterize}"= 'design request form'.titleize
+      - data.docs.links.each do |link|
+        li
+          a href="##{link.name.parameterize}"= link.name.titleize

@@ -11,6 +11,8 @@
         span.icon-bar
     nav.collapse.navbar-collapse role="navigation"
       ul.nav.navbar-nav.pull-right
+        li class="#{'active' if current_page.path == 'docs.html'}"
+          a href='docs.html' Docs
         li class="#{'active' if current_page.path == 'index.html'}"
           a href='index.html' General Guidelines
         li class="#{'active' if current_page.path == 'presentations.html'}"

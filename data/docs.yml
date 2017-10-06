@@ -1,0 +1,13 @@
+section_path: 'sections/docs/'
+links:
+  - name: 'presentation template'
+    partial_name: presentation_template
+
+  - name: 'g. docs offline'
+    partial_name: google_docs_offline
+
+  - name: 'ad specs doc'
+    partial_name: ad_specs_doc
+
+  - name: 'banner request form'
+    partial_name: banner_request_form

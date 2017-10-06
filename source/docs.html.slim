@@ -1,0 +1,10 @@
+.main-col.col-md-9
+  br/
+  .row.grid
+    .cell.feature
+      h2 id='design-request-form'= 'design request form'.titleize
+      = partial (data.docs.section_path + 'design_request_form')
+    - data.docs.links.each do |link|
+      .cell
+        h2 id="#{link.name.parameterize}"= link.name.titleize
+        = partial (data.docs.section_path + link.partial_name)
