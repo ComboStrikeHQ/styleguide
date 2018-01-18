@@ -1,5 +1,15 @@
 .left-col.col-md-3
   ul.sidebar.nav.nav-stacked.hidden-xs
+    - if current_page.path == 'components.html' || current_page.path == 'patterns.html'
+      li
+        a.nav-link href='https://getbootstrap.com/docs/3.3/components/' target='_blank'
+          = 'Bootstrap v3 Documentation'
+          i.glyphicon.glyphicon-new-window.text-primary.pull-left style='margin-right: 15px;'
+    li
+      a.nav-link href='http://styleguide.nevaly.com' target='_blank'
+        = 'nevaly Styleguide'
+        i.glyphicon.glyphicon-new-window.text-primary.pull-left style='margin-right: 15px;'
+    hr
 
     - if current_page.path == 'index.html'
       - data.general.guidelines.each do |guideline|
