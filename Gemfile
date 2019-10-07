@@ -17,7 +17,7 @@ gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'm
 gem 'slim'
 gem 'bootstrap-sass'
 gem 'jquery-middleman'
-gem 'ad2games-theme', git: 'https://github.com/ad2games/ad2games-theme', require: false
+gem 'ad2games-theme', git: 'https://github.com/ComboStrikeHQ/ad2games-theme', require: false
 # gem 'sprockets-sass'
 # gem 'font-awesome-sass'
 
